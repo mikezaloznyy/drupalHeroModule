@@ -49,6 +49,6 @@ class HeroBlock extends BlockBase {
             ];
           }
       
-          return $table;
+        return $table;
     }
 }
