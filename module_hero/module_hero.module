@@ -27,5 +27,13 @@ function module_hero_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $fo
   //    kint($form); die();
       $form['#validate'][] = '_module_hero_article_validate';
     }
-  
   }
+
+/**
+ * Our custom validation function.
+ */
+function _module_hero_article_validate(&$form, $form_state) {
+    if (is_numeric($form_state->getValue('title')[0]['value'])) {
+        $form_state->setErrorByName('title', t('Title should not be a number!'));
+    }
+}
