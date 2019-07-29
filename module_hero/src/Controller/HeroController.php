@@ -23,8 +23,8 @@ class HeroController extends ControllerBase {
     }
 
     public function heroList() {
-        kint($this->articleHeroService->getHeroArticles()); die();
-        
+        //kint($this->articleHeroService->getHeroArticles()); die();
+
         $heroes = [
             ['name' => 'Hulk'],
             ['name' => 'Thor'],
@@ -35,7 +35,6 @@ class HeroController extends ControllerBase {
             ['name' => 'Captain America'],
             ['name' => 'Wolverine']
         ];
-
 
         return [
             '#theme'    => 'hero_list',
