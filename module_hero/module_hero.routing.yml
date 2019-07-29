@@ -18,6 +18,14 @@ module_hero.exampleform:
   path: '/example-form'
   defaults:
     _form: '\Drupal\module_hero\Form\ExampleForm'
-    _title: 'Example Form'
+    _title: 'Showcase some elements'
+  requirements:
+    _permission: 'access content'
+
+module_hero.ajaxheroform:
+  path: '/ajax-form'
+  defaults:
+    _form: '\Drupal\module_hero\Form\AjaxHeroForm'
+    _title: 'Ajax hero form battle'
   requirements:
     _permission: 'access content'
